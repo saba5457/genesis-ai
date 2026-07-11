@@ -1,6 +1,6 @@
 # Project Workflow
 
-Version: 1.1
+Version: 1.2
 
 Status: Approved
 
@@ -8,11 +8,11 @@ Status: Approved
 
 # Purpose
 
-This document defines the complete lifecycle of a software project inside Genesis AI.
+This document defines the complete software engineering workflow followed by Genesis AI.
 
-It explains how a project moves through the organization, how responsibilities are transferred between AI Agents, and how engineering quality is maintained throughout the entire software development lifecycle.
+It describes how a software project progresses through the organization, how responsibilities are transferred between AI Agents, and how engineering quality, documentation, and architectural integrity are maintained throughout the Software Development Life Cycle (SDLC).
 
-Every project inside Genesis AI must follow this workflow without exception.
+Every software project executed within Genesis AI must follow this workflow without exception.
 
 ---
 
@@ -24,7 +24,11 @@ Every stage must produce approved deliverables before the next stage begins.
 
 Implementation never starts without approved documentation.
 
-Architecture always precedes implementation, and every major engineering decision remains traceable throughout the project lifecycle.
+Architecture always precedes implementation.
+
+Every significant engineering decision must remain traceable throughout the project lifecycle.
+
+Significant architectural decisions must be documented through approved **Architecture Decision Records (ADRs)** before implementation proceeds.
 
 ---
 
@@ -91,6 +95,8 @@ Responsibilities must never overlap.
 
 Every stage must produce clearly defined deliverables before the next stage begins.
 
+Documentation must always remain synchronized with the approved architecture.
+
 ---
 
 # Founder Responsibilities
@@ -99,12 +105,12 @@ The Founder is responsible for:
 
 - Defining the project vision.
 - Approving major engineering decisions.
-- Approving architecture.
-- Approving documentation.
+- Approving software architecture.
+- Approving project documentation.
 - Approving significant scope changes.
-- Making final strategic decisions for Genesis AI.
+- Making final strategic decisions.
 
-The Founder has final decision authority throughout the workflow.
+The Founder holds the final decision authority throughout the engineering workflow.
 
 ---
 
@@ -127,8 +133,8 @@ CEO Agent
 
 ### Exit Criteria
 
-- Business objective is understood.
-- Project is ready for requirements analysis.
+- Business objective is clearly understood.
+- Project is ready for requirements engineering.
 
 ---
 
@@ -141,7 +147,7 @@ Requirements Analyst Agent
 ### Input
 
 - Business objective
-- Founder clarification
+- Founder clarifications
 
 ### Output
 
@@ -150,8 +156,8 @@ Requirements Analyst Agent
 ### Exit Criteria
 
 - Requirements are complete.
-- Ambiguity is removed.
-- Founder approves the SRS.
+- Ambiguity has been removed.
+- Founder approves the Software Requirements Specification.
 
 ---
 
@@ -163,18 +169,20 @@ Project Manager Agent
 
 ### Input
 
-- Approved SRS
+- Approved Software Requirements Specification
 
 ### Output
 
-- Milestones
+- Project milestones
 - Task breakdown
 - Dependency plan
+- Delivery roadmap
 
 ### Exit Criteria
 
 - Project execution plan is complete.
-- Founder approves the project plan if major scope changes exist.
+- Resource planning is complete.
+- Founder approves major scope changes, if applicable.
 
 ---
 
@@ -186,19 +194,21 @@ Software Architect Agent
 
 ### Input
 
-- Approved project plan
-- Approved SRS
+- Approved Software Requirements Specification
+- Approved Project Plan
 
 ### Output
 
-- Software architecture
-- Module design
-- Technical guidelines
+- Software Architecture
+- Module Design
+- Engineering Guidelines
+- Technical Standards
 
 ### Exit Criteria
 
-- Architecture is reviewed.
-- Founder approves the architecture.
+- Architecture has been reviewed.
+- Architecture satisfies engineering standards.
+- Founder approves the software architecture.
 
 ---
 
@@ -210,18 +220,20 @@ Backend Engineer Agent
 
 ### Input
 
-- Approved architecture
+- Approved Architecture
 
 ### Output
 
 - Backend implementation
 - APIs
 - Database layer
+- Backend technical documentation
 
 ### Exit Criteria
 
 - Backend implementation is complete.
-- Backend deliverables satisfy architectural guidelines.
+- Implementation follows approved architecture.
+- Backend deliverables satisfy engineering guidelines.
 
 ---
 
@@ -233,7 +245,7 @@ Frontend Engineer Agent
 
 ### Input
 
-- Approved architecture
+- Approved Architecture
 - Backend APIs
 
 ### Output
@@ -241,11 +253,13 @@ Frontend Engineer Agent
 - Frontend implementation
 - User Interface
 - Client-side integration
+- Frontend technical documentation
 
 ### Exit Criteria
 
 - Frontend implementation is complete.
-- Integration with backend is successful.
+- Backend integration is successful.
+- User interface satisfies project requirements.
 
 ---
 
@@ -264,6 +278,7 @@ QA Engineer Agent
 
 - Test reports
 - Bug reports
+- Quality assessment
 - Release recommendation
 
 ### Exit Criteria
@@ -289,11 +304,13 @@ DevOps Engineer Agent
 - Production deployment
 - Deployment report
 - Monitoring configuration
+- Deployment verification
 
 ### Exit Criteria
 
 - Software is successfully deployed.
-- Monitoring is active.
+- Monitoring is operational.
+- Deployment has been verified.
 
 ---
 
@@ -310,21 +327,22 @@ Documentation Agent
 
 ### Output
 
-- Updated technical documentation
+- Technical documentation
 - User documentation
 - API documentation
 - Release documentation
 
 ### Exit Criteria
 
-- Documentation reflects the deployed system.
-- Project documentation is complete and consistent.
+- Documentation reflects the deployed software.
+- Documentation is complete.
+- Documentation is internally consistent.
 
 ---
 
 # Approval Gates
 
-The following stages require explicit Founder approval:
+The following workflow stages require explicit Founder approval:
 
 - Software Requirements Specification (SRS)
 - Software Architecture
@@ -333,33 +351,56 @@ The following stages require explicit Founder approval:
 
 Every approval decision must be documented and remain traceable throughout the project lifecycle.
 
+Approved architectural decisions must remain consistent with the project's accepted **Architecture Decision Records (ADRs)**.
+
 No workflow stage may bypass these approval gates.
+
+---
+
+# Documentation Governance
+
+The following documents govern every software project executed within Genesis AI:
+
+- PROJECT_CONTEXT.md
+- SYSTEM_ARCHITECTURE.md
+- PROJECT_WORKFLOW.md
+- PROJECT_HISTORY.md
+- Architecture Decision Records (ADRs)
+
+When documentation conflicts occur, the approved architecture and accepted ADRs take precedence until all affected documentation has been reviewed and updated.
+
+Documentation must always remain synchronized with the approved architecture.
 
 ---
 
 # Workflow Completion
 
-A project is considered complete only when:
+A software project is considered complete only when:
 
 - All workflow stages have been successfully completed.
-- Documentation is fully updated.
-- Quality assurance has approved the software.
-- Deployment has been completed successfully.
-- All required approvals have been recorded.
+- All required deliverables have been produced.
+- Documentation has been fully updated.
+- Quality Assurance has approved the software.
+- Deployment has been successfully completed.
+- All applicable Architecture Decision Records (ADRs) have been documented and approved.
+- All required Founder approvals have been recorded.
 - Final documentation accurately represents the delivered software.
+
+A workflow is not considered complete until all completion criteria have been satisfied.
 
 ---
 
 # Success Criteria
 
-The workflow succeeds when:
+The workflow is considered successful when:
 
 - Every stage follows the approved sequence.
 - Responsibilities remain clearly separated.
-- No architectural decisions are bypassed.
 - Documentation remains synchronized with implementation.
-- Every handoff is traceable through the communication protocol.
-- Engineering quality is maintained throughout the lifecycle.
+- Every architectural decision is traceable.
+- Every workflow handoff follows the approved communication protocol.
+- Engineering quality is maintained throughout the project lifecycle.
+- Approved ADRs remain consistent with the implemented architecture.
 
 ---
 
@@ -368,24 +409,79 @@ The workflow succeeds when:
 The workflow fails when:
 
 - Workflow stages are skipped.
+- Required documentation is missing.
+- Architecture is bypassed.
 - Unapproved changes are introduced.
-- Documentation becomes inconsistent.
+- Documentation becomes inconsistent with implementation.
 - Responsibility boundaries are violated.
-- Required approvals are bypassed.
-- Deliverables do not satisfy the defined exit criteria.
+- Required Founder approvals are bypassed.
+- Deliverables fail to satisfy the defined exit criteria.
+- Architectural decisions contradict approved ADRs.
+
+Whenever a failure condition occurs, the workflow must return to the appropriate stage for correction before work may continue.
+
+---
+
+# Workflow Governance
+
+Every workflow executed within Genesis AI is governed by the following principles:
+
+- Documentation before development.
+- Architecture before implementation.
+- Review before approval.
+- Approval before implementation.
+- Traceability before completion.
+- Quality before speed.
+
+Engineering quality must never be sacrificed for convenience or rapid delivery.
 
 ---
 
 # Future Extensions
 
-This workflow is designed to support future enhancements, including:
+This workflow has been intentionally designed to support future platform capabilities without requiring fundamental architectural changes.
 
-- Parallel engineering workflows
-- Multi-project execution
-- Human-in-the-loop approvals
-- Autonomous task orchestration
-- Workflow analytics
-- AI memory integration
-- Agent Monitoring
-- Workflow State Management
+Future enhancements include:
+
+- Parallel Engineering Workflows
+- Multi-Project Execution
+- Human Approval Gates
+- Workflow State Manager
+- Agent Memory System
+- Knowledge Base Integration
+- Tool Integration Framework
 - Multi-Agent Communication Engine
+- Workflow Analytics
+- Agent Monitoring
+- Autonomous Task Orchestration
+
+These capabilities are part of the approved roadmap and will be implemented only after their respective architectural documentation has been reviewed and approved.
+
+---
+
+# Related Documents
+
+This workflow should always be read together with:
+
+- PROJECT_CONTEXT.md
+- SYSTEM_ARCHITECTURE.md
+- ENGINEERING_LAYER_ARCHITECTURE.md
+- AGENT_COMMUNICATION_PROTOCOL.md
+- PROJECT_HISTORY.md
+- Architecture Decision Records (ADRs)
+
+---
+
+# Document Maintenance
+
+This document is an architectural governance document.
+
+It must be updated only when the software engineering workflow itself changes.
+
+Minor implementation changes must not modify this document.
+
+Any significant workflow modification must first be reviewed by the Software Architect, approved by the Founder, and recorded through an appropriate Architecture Decision Record (ADR) before becoming part of the official workflow.
+
+---
+
+**End of Document**
