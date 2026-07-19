@@ -1,10 +1,10 @@
 # Genesis AI — Project Context
 
-Version: 4.3
+Version: 4.4
 
 Status: Active Development
 
-Last Updated: Mission 14 Complete
+Last Updated: Mission 15 Started
 
 ---
 
@@ -242,18 +242,20 @@ Deliverables:
 
 ## Mission 15
 
-**Mission Name: Core Platform Foundation**
+**Mission Name:** Core Platform Foundation
 
 **Status:** Planning
 
-Objectives:
+### Objectives
 
+- Define the production technology stack.
 - Define the production repository bootstrap.
 - Establish the core application structure.
 - Prepare the implementation foundation based on the approved architecture.
 - Define initial shared engineering components.
+- Finalize repository bootstrap decisions through architecture governance.
 
-Implementation should begin only after Mission 15 documentation has been reviewed, approved, committed, and pushed to GitHub.
+Implementation must not begin until Mission 15 documentation has been reviewed, approved, committed, and pushed to GitHub.
 
 ---
 
@@ -417,6 +419,20 @@ Every significant architectural decision must be documented, reviewed, and appro
 
 ---
 
+# Mission 15 Planned Deliverables
+
+The following deliverables are planned for Mission 15:
+
+- Technology Stack Finalization
+- Production Repository Bootstrap
+- Production Repository Structure Validation
+- Development Environment Definition
+- ADR-0005 — Production Repository Bootstrap
+
+Mission 15 establishes the engineering foundation required before writing the first production code.
+
+---
+
 # Collaboration Workflow
 
 Software Architect (ChatGPT)
@@ -564,7 +580,7 @@ Quality is never sacrificed for convenience.
 
 # Document Information
 
-Version: 4.3
+Version: 4.4
 
 Status: Active Development
 
@@ -582,5 +598,6 @@ Approval Status:
 
 Approved
 
+---
 
 **End of Document**

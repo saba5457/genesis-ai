@@ -77,6 +77,17 @@ Never rely on outdated conversation history if it conflicts with the latest docu
 
 Always continue from the Current Mission defined inside `PROJECT_CONTEXT.md`.
 
+Mission 15 focuses on establishing the **Core Platform Foundation**.
+
+During Mission 15:
+
+- Define and validate the production technology stack.
+- Establish the production repository bootstrap.
+- Prepare the implementation foundation.
+- Preserve the approved architecture.
+
+Do **NOT** implement business features, AI workflows, autonomous execution, or application logic until they become the approved Current Mission.
+
 Never assume or invent future missions.
 
 If a new mission is required:
